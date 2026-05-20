@@ -25,19 +25,23 @@ body {
 /* ヘッダー */
 header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     padding-top: 10px;
-}
-.header-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 15px;
-    border: 2px solid #FFD700;
-    margin-bottom: 10px;
 }
 h1 {
     font-size: 24px;
     letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.notice-text {
+    font-size: 11px;
+    color: #CCCC00;
+    line-height: 1.4;
+    text-align: left;
+    background-color: #111100;
+    border: 1px solid #555500;
+    padding: 10px;
+    border-radius: 6px;
 }
 
 /* 入力エリア */
@@ -139,4 +143,55 @@ button:active {
     margin-top: 10px;
     color: #FFF;
     text-shadow: 0 0 5px #FFD700;
+    margin-bottom: 10px;
+}
+
+/* 計算式エリア */
+.formula-section {
+    margin-top: 40px;
+    border-top: 2px solid #FFD700;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.formula-section h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.formula-section > p {
+    font-size: 12px;
+    color: #CCCC00;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formula-block {
+    background-color: #111111;
+    border: 1px solid #444400;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+.formula-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFF;
+    margin-bottom: 4px;
+}
+
+.formula-exp {
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #FFD700;
+    word-break: break-all;
+}
+
+.formula-note {
+    font-size: 11px;
+    color: #888888;
+    display: block;
+    margin-top: 4px;
 }
