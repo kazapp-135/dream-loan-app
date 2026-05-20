@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>夢見るアプリ</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="apple-touch-icon" href="icon.png">
-    <link rel="icon" href="icon.png">
     <meta name="apple-mobile-web-app-title" content="夢見るアプリ">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -14,8 +12,10 @@
 <body>
     <div class="app-container">
         <header>
-            <img src="icon.png" alt="アプリアイコン" class="header-icon">
             <h1>夢見るアプリ</h1>
+            <p class="notice-text">
+                ※本アプリの計算結果はあくまで簡易的な目安です。実際のローン契約時には、端数処理やボーナス払いの利息計算方式の違いにより、グーネット等の見積もりと金額が数千円〜数万円異なる場合があります。正確な金額は販売店や金融機関にご確認ください。
+            </p>
         </header>
 
         <div class="input-section">
@@ -60,6 +60,38 @@
                 <p class="result-value"><span id="res-interest">0</span> <span class="unit">万円</span></p>
             </div>
             <p class="joke-text">稼いだ分だけ気合いのローン！</p>
+        </div>
+
+        <div class="formula-section">
+            <h3>【計算の一般式】</h3>
+            <p>本アプリは以下の元利均等返済方式（簡易版）で計算しています。</p>
+            
+            <div class="formula-block">
+                <p class="formula-title">① ローン元金 (P)</p>
+                <p class="formula-exp">P = 車両価格 − 頭金</p>
+            </div>
+
+            <div class="formula-block">
+                <p class="formula-title">② 月利 (r)</p>
+                <p class="formula-exp">r = 金利(%) ÷ 100 ÷ 12</p>
+            </div>
+
+            <div class="formula-block">
+                <p class="formula-title">③ 総返済額 (A)</p>
+                <p class="formula-exp">A = P × [ r(1+r)<sup>M</sup> ] ÷ [ (1+r)<sup>M</sup> − 1 ] × M</p>
+                <span class="formula-note">※M = 支払回数（ヶ月）</span>
+            </div>
+
+            <div class="formula-block">
+                <p class="formula-title">④ 増えた分 / 利息 (D)</p>
+                <p class="formula-exp">D = A − P</p>
+            </div>
+
+            <div class="formula-block">
+                <p class="formula-title">⑤ 月々の支払額 (X)</p>
+                <p class="formula-exp">X = (A − ボーナス総額) ÷ M</p>
+                <span class="formula-note">※ボーナス総額 = 1回額 × 年間回数 × 年数</span>
+            </div>
         </div>
     </div>
 
